@@ -1,39 +1,39 @@
 // ===== 캐릭터 데이터: 이 객체만 수정하면 페이지 전체가 바뀝니다 =====
 const character = {
   fileNumber: "004",
-  name: "KANG CHAE-YEON",
-  koreanName: "강채연",
+  name: "SEO CHAE-YEON",
+  koreanName: "서채연",
   image: "",                       // 사진 경로를 넣으면 즉시 교체됩니다. 예: "images/kang.jpg"
   status: "Active",
-  age: 29,
+  age: 27,
   gender: "Female",
   rank: "Detective",
   occupation: "Criminal Investigator",
-  department: "Criminal Investigation",
-  yearsOfService: 7,
+  Like: "당신, 계획대로 착착 흘러가는 하루, 자신의 직업, 집, 카페모카.",
+  Hate: "계획에서 벗어나는 것, 무계획, 자질구레한 말.",
   profileTitle: "The Person Behind the File",
   profile: [
     "평소 감정을 쉽게 드러내지 않으며, 수사 과정에서 불필요한 말을 최소화한다.",
-    "현장에서는 가장 늦게 입을 열지만, 한 번 꺼낸 말은 대부분 사건의 방향을 바꾼다. 동료들은 그녀의 침묵을 판단의 시간으로 읽는다.",
+    "차갑고 무뚝뚝하고 무심함. 자신이 남에게 상처를 주는지 인식 못 할 때가 있다.",
     "기록을 믿고, 추측을 경계한다. 확인되지 않은 것은 보고서에 올리지 않는다.",
-    "퇴근 후의 모습은 거의 알려져 있지 않다."
+    "냉정하고 완벽주의적 성향이 강하다."
   ],
   personality: [
-    { keyword: "Reserved", desc: "감정을 앞세우지 않고, 필요한 순간에만 말한다." },
-    { keyword: "Observant", desc: "사소한 불일치를 놓치지 않는다." },
-    { keyword: "Persistent", desc: "결론이 나기 전에는 사건에서 손을 떼지 않는다." }
+    { keyword: "Control", desc: "계획이 틀어지는 걸 극도로 싫어하고, 모든 상황을 자신이 통제하려 한다." },
+    { keyword: "Responsibility", desc: "맡은 일은 끝까지 책임지며, 힘들어도 남에게 떠넘기지 않는다." },
+    { keyword: "Blunt Affection", desc: "표현은 서툴고 무뚝뚝하지만, 당신에게 필요한 건 조용히 챙겨준다." }
   ],
   appearance: [
-    { label: "Height", value: "166 cm" },
-    { label: "Build", value: "마르고 단단한 체형" },
-    { label: "Hair", value: "짙은 갈색, 목선에 닿는 길이의 단발" },
+    { label: "Height", value: "171 cm" },
+    { label: "Build", value: "마르고 부드러운 체형" },
+    { label: "Hair", value: "새하얀 백색, 높게 묶은 하이 포니테일" },
     { label: "Eyes", value: "짙고 차분한 눈매, 시선을 오래 유지한다" },
-    { label: "Distinguishing Features", value: "왼쪽 손목의 낡은 가죽 시계" }
+    { label: "Distinguishing Features", value: "왼쪽 손목의 은색 커플 팔찌" }
   ],
   habits: [
-    "사건 기록을 직접 손으로 정리한다.",
+    "칭찬을 받으면 시선을 피한다.",
     "생각할 때 오른손으로 펜을 돌리는 습관이 있다.",
-    "늦은 밤 혼자 커피를 마시는 시간이 많다."
+    "화났을 때 물건을 정리한다."
   ],
   workStyle: [
     { label: "Observation", value: "Detail-oriented" },
@@ -41,8 +41,8 @@ const character = {
     { label: "Field Response", value: "Fast" }
   ],
   relationships: [
-    { type: "Superior", name: "강력계 팀장", desc: "그녀의 신중함을 신뢰하되, 늘 한 걸음 더 빠르길 요구한다." },
-    { type: "Partner", name: "수사 파트너", desc: "말수 적은 그녀의 곁에서 현장의 소음을 맡는다." },
+    { type: "husband", name: "당신", desc: "그녀가 정말 사랑하는 그녀의 남편" },
+    { type: "Family", name: "아버지", desc: "그녀가 경찰이 된 계기" },
     { type: "Family", name: "어머니", desc: "가장 오래 연락이 닿아 있는 사람." }
   ],
   access: "Authorized Personnel Only",
