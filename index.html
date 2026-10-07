@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Personnel Files — Kang Chae-yeon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+KR:wght@300;400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <span class="bar-l">PERSONNEL FILES</span>
+  <span class="bar-r"><span data-bind="fileLabel"></span><i></i>CONFIDENTIAL<i></i>BORI POLICE STATION</span>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <figure class="portrait" id="portrait">
+      <img id="portraitImg" alt="" hidden>
+      <div class="ph" id="placeholder"><span>PORTRAIT</span><span data-bind="imageLabel"></span></div>
+      <div class="grain"></div>
+    </figure>
+    <div class="hero-text">
+      <p class="meta"><span data-bind="fileLabel"></span><i class="ln"></i><span data-bind="status"></span></p>
+      <h1 class="name"><span data-bind="nameLines"></span></h1>
+      <p class="kname" data-bind="koreanName"></p>
+      <p class="role"><span data-bind="rank"></span><i class="ln"></i><span data-bind="department"></span></p>
+    </div>
+    <div class="scroll-hint">PERSONNEL ARCHIVE</div>
+  </section>
+
+  <section class="sec" id="info">
+    <header class="sec-h reveal"><span>01 — PROFILE</span><i class="line"></i></header>
+    <dl class="info" id="infoList"></dl>
+  </section>
+
+  <section class="sec two" id="profile">
+    <div class="col-l reveal">
+      <p class="label">PERSONNEL PROFILE</p>
+      <h2 class="title" data-bind="profileTitle"></h2>
+    </div>
+    <div class="col-r reveal" id="profileText"></div>
+  </section>
+
+  <section class="sec" id="character">
+    <header class="sec-h reveal"><span>02 — CHARACTER</span><i class="line"></i></header>
+
+    <div class="two block">
+      <div class="col-l reveal"><p class="label">PERSONALITY / 성격</p></div>
+      <div class="col-r" id="personality"></div>
+    </div>
+
+    <div class="two block">
+      <div class="col-l reveal"><p class="label">APPEARANCE</p></div>
+      <dl class="col-r app" id="appearance"></dl>
+    </div>
+
+    <div class="two block">
+      <div class="col-l reveal"><p class="label">HABITS</p></div>
+      <ol class="col-r habits" id="habits"></ol>
+    </div>
+
+    <div class="two block">
+      <div class="col-l reveal"><p class="label">WORK STYLE</p></div>
+      <dl class="col-r work" id="workStyle"></dl>
+    </div>
+  </section>
+
+  <section class="sec" id="relationships">
+    <header class="sec-h reveal"><span>03 — RELATIONSHIPS</span><i class="line"></i></header>
+    <div class="two">
+      <div class="col-l reveal"><h2 class="title sm">CHARACTER<br>RELATIONSHIPS</h2></div>
+      <ul class="col-r rel" id="relList"></ul>
+    </div>
+  </section>
+
+  <section class="sec end" id="closing">
+    <div class="reveal">
+      <p class="label">CONFIDENTIAL FILE</p>
+      <dl class="close" id="closeList"></dl>
+      <div class="endline"><i class="line"></i><span>FILE CLOSED</span></div>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
