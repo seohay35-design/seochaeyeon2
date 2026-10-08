@@ -9,8 +9,8 @@ const character = {
   gender: "Female",
   rank: "Detective",
   occupation: "Criminal Investigator",
-  Like: "당신, 계획대로 착착 흘러가는 하루, 자신의 직업, 집, 카페모카.",
-  Hate: "계획에서 벗어나는 것, 무계획, 자질구레한 말.",
+  like: "당신, 계획대로 착착 흘러가는 하루, 자신의 직업, 집, 카페모카.",
+  hate: "계획에서 벗어나는 것, 무계획, 자질구레한 말.",
   profileTitle: "The Person Behind the File",
   profile: [
     "평소 감정을 쉽게 드러내지 않으며, 수사 과정에서 불필요한 말을 최소화한다.",
@@ -41,7 +41,7 @@ const character = {
     { label: "Field Response", value: "Fast" }
   ],
   relationships: [
-    { type: "husband", name: "당신", desc: "그녀가 정말 사랑하는 그녀의 남편" },
+    { type: "Husband", name: "당신", desc: "그녀가 정말 사랑하는 그녀의 남편" },
     { type: "Family", name: "아버지", desc: "그녀가 경찰이 된 계기" },
     { type: "Family", name: "어머니", desc: "가장 오래 연락이 닿아 있는 사람." }
   ],
@@ -61,7 +61,7 @@ const bind = {
   status: "STATUS / " + c.status.toUpperCase(),
   koreanName: c.koreanName,
   rank: c.rank.toUpperCase(),
-  department: c.department.toUpperCase(),
+  occupation: c.occupation.toUpperCase(),
   profileTitle: c.profileTitle
 };
 document.querySelectorAll("[data-bind]").forEach(el => {
@@ -93,9 +93,9 @@ const h = (tag, cls, html) => { const e = document.createElement(tag); if (cls) 
 const row = (wrap, dt, dd) => { const d = h("div"); d.append(h("dt", "label", dt), h("dd", null, dd)); wrap.append(d); };
 
 // 인적 정보
-[["Age", c.age], ["Gender", c.gender], ["Rank", c.rank], ["Occupation", c.occupation],
- ["Department", c.department], ["Years of Service", pad(c.yearsOfService) + " Years"]]
- .forEach(([a, b]) => { const d = h("div", "reveal"); d.append(h("dt", null, a), h("dd", null, b)); $("infoList").append(d); });
+[["Age", c.age], ["Gender", c.gender], ["Rank", c.rank],
+ ["Occupation", c.occupation, "wide"], ["Like", c.like, "wide long"], ["Hate", c.hate, "wide long"]]
+ .forEach(([a, b, cls]) => { const d = h("div", "reveal " + (cls || "")); d.append(h("dt", null, a), h("dd", null, b)); $("infoList").append(d); });
 
 // 프로필
 c.profile.forEach(t => $("profileText").append(h("p", null, t)));
